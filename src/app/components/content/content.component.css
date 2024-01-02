@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.img-bg {
+  background-image: url("../../../assets/profile.jpeg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 40% 100%;
+
+  min-height: 92vh;
+
+  @media screen and (max-width: 768px) {
+    background-image: none;
+  }
+}
+
+.description-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 168px;
+  gap: 33px;
+
+  max-width: 723px;
+
+  h1 {
+    margin-top: 138px;
+
+    color: hsl(0, 0%, 100%);
+    font-family: Roboto;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    max-width: 696px;
+
+    /* Fazendo a borda do lado esquerdo */
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-left-color: blue;
+    margin-left: -23px;
+    padding-left: 23px;
+  }
+
+  h2 {
+    max-width: 630px;
+
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  a {
+    background: linear-gradient(to right, #007bff, #00bfff);
+    padding: 6px 40px;
+    border-radius: 99px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    width: 226px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  span {
+    width: 100%;
+    background-image: linear-gradient(to right, #007bff, #00bfff);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: 50px;
+    margin-top: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 33px;
+
+    h1 {
+      margin-top: 138px;
+
+      color: hsl(0, 0%, 100%);
+      font-family: Roboto;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      max-width: 100%;
+
+      /* Fazendo a borda do lado esquerdo */
+      border-left-width: 4px;
+      border-left-style: solid;
+      border-left-color: blue;
+      margin-left: -23px;
+      padding-left: 23px;
+    }
+
+    h2 {
+      font-size: 16px;
+      max-width: 100%;
+    }
+
+    a {
+      font-size: 24px;
+      width: 80%;
+    }
+
+    .gradient-text-container {
+      margin-left: 0;
+    }
+  }
+}
+
+.gradient-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: -168px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+.gradient-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 40px 0 0;
+
+  @media screen and (max-width: 768px) {
+    margin: 40px 40px 0 0;
+  }
+}
+
+.number {
+  background-image: linear-gradient(to right, #007bff, #00bfff);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.projects {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: white;
+}

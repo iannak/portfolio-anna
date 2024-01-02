@@ -1,0 +1,41 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.profile-img {
+  max-width: 200px;
+  border-radius: 50%;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 100px;
+    margin-top: 0;
+  }
+}
+
+.about-text {
+  margin-top: 20px;
+
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #00bfff;
+  margin-left: -23px;
+  padding-left: 23px;
+
+  a {
+    color: #00bfff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+}
