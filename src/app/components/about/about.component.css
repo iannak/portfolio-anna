@@ -18,18 +18,19 @@ body {
 
 .about-text {
   margin-top: 20px;
-
-  border-left-width: 4px;
-  border-left-style: solid;
-  border-left-color: #00bfff;
   margin-left: -23px;
   padding-left: 23px;
 
-  a {
-    color: #00bfff;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text a {
+  color: #00bfff;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .social-icons {
