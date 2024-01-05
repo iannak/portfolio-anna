@@ -7,4 +7,4 @@ import { ServiceComponent } from './service.component';
   exports: [ServiceComponent],
   imports: [CommonModule],
 })
-export class ContentModule {}
+export class ServiceModule {}
