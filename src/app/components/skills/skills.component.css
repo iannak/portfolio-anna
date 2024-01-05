@@ -1,0 +1,15 @@
+.image-container img {
+  margin-right: 10px;
+}
+
+.btn-download button {
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
