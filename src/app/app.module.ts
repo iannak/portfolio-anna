@@ -1,16 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { NavbarModule } from './components/navbar/navbar.module';
-import { ContentComponent } from './components/content/content.component';
-import { AboutComponent } from './components/about/about.component';
-import { ServiceComponent } from './components/service/service.component';
+import { AboutModule } from './components/about/about.module';
+import { ContentModule } from './components/content/content.module';
+import { ServiceModule } from './components/service/service.module';
 
 @NgModule({
-  declarations: [AppComponent, ContentComponent, AboutComponent, ServiceComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, NavbarModule],
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NavbarModule,
+    ContentModule,
+    AboutModule,
+    ServiceModule,
+    BrowserAnimationsModule,
+    RouterModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
