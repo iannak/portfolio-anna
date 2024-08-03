@@ -130,6 +130,13 @@ nav .nav-links a.selected{
     gap: 20px;
 }
 
+.recent .posts-youtube {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
 .recent .posts .post-item{
     background-color: #fff;
     padding: 24px;
