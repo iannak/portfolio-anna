@@ -54,24 +54,88 @@
             </div>
         </div>
     </div>
+    <div class="content">
+      <form>
+        <h2>Contact</h2>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Name" aria-label="Name" />
 
-    <footer>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" aria-label="Email" />
+
+        <label for="message">Message</label>
+        <textarea placeholder="Message" aria-label="Message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <footer>    
         <div class="socials">
             <a href="https://x.com/FranzKarols" alt="twitter" target="_blank">
-                <i class='bx bxl-twitter'>
-                </i>
+                <i class='bx bxl-twitter'></i>
             </a>
                 <a href="https://github.com/iannak" alt="github" target="_blank">
           <i class='bx bxl-github'></i>
         </a>
             <a href="https://www.linkedin.com/in/anna-karolina-f-b72242218/" alt="linkedin" target="_blank">
-                <i class='bx bxl-linkedin-square'>
-                </i>
+                <i class='bx bxl-linkedin-square'></i>
             </a>
         </div>
         <p>Copyright ©2024, All rights reserved.</p>
     </footer>
-
 </body>
+ <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBVQMDAHnpXC7AbfVgx_TaOpE95pCxCsGg",
+        authDomain: "my-portfolio-c5e56.firebaseapp.com",
+        projectId: "my-portfolio-c5e56",
+        storageBucket: "my-portfolio-c5e56.appspot.com",
+        messagingSenderId: "904282612820",
+        appId: "1:904282612820:web:91de02cfd8a2ec7e0279c1",
+        measurementId: "G-TV015SESVL"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        
+        const name = e.target.querySelector('input[type="text"]').value;
+        const email = e.target.querySelector('input[type="email"]').value;
+        const message = e.target.querySelector('textarea').value;
+
+        // Validate form data
+        if (name && email && message) {
+            const formData = {
+                name: name,
+                email: email,
+                message: message,
+                timestamp: new Date() // Optional: add a timestamp
+            };
+
+            try {
+                // Store form data in Firestore
+                await addDoc(collection(db, "messages"), formData);
+                alert("Message sent successfully!");
+                form.reset(); // Reset the form
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                alert("Failed to send message. Please try again.");
+            }
+        } else {
+            alert("Please fill in all fields.");
+        }
+    });
+</script>
 
 </html>
