@@ -175,7 +175,7 @@ nav .nav-links a.selected {
 }
 
 .featured {
-  padding: 40px 290px 0;
+  padding: 40px 193px 20px;
 }
 
 .featured .item,
@@ -189,8 +189,8 @@ nav .nav-links a.selected {
 
 .featured .item img,
 .works-list .item img {
-  width: 320px;
-  height: 200px;
+  width: 100%;
+  height: 13rem;
   border-radius: 6px;
 }
 
@@ -198,6 +198,14 @@ nav .nav-links a.selected {
 .works-list .item h3 {
   font-size: 30px;
   margin-bottom: 16px;
+}
+
+.details a {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 3rem;
+  color: #303f9f;
+  font-weight: bold;
 }
 
 .featured .item .details .item-info,
@@ -260,7 +268,9 @@ footer p {
 }
 
 .page-title {
-  padding: 80px 234px 20px;
+  padding: 80px 193px 20px;
+  display: flex;
+  justify-content: flex-start;
   width: 100%;
 }
 
